@@ -9,6 +9,11 @@
   <head th:insert="blocks/header :: header"></head>
   <div class="container mt-5">
     <h1>Blog</h1>
+    <div th:each="el : ${posts}" class="alert alert-info mt-2">
+      <h3 th:text="${el.title}"/>
+      <p th:text="${el.anons}"/>
+      <a href="'/blog/' ${el.id}">Show</a>
+    </div>
   </div>
   <div th:insert="blocks/footer :: footer"></div>
 </body>
